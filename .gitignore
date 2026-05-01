@@ -1,0 +1,6 @@
+node_modules/
+data/training-dataset.json
+models/logic-lens/weights.json
+models/logic-lens/meta.json
+*.log
+.DS_Store

@@ -1,0 +1,152 @@
+[
+  {
+    "id": "linear",
+    "label": "Fonction linéaire : y = ax + b",
+    "category": "algebra",
+    "code": "function linear(x, a, b) { return a * x + b; }"
+  },
+  {
+    "id": "quadratic",
+    "label": "Fonction quadratique : y = ax² + bx + c",
+    "category": "algebra",
+    "code": "function quadratic(x, a, b, c) { return a * x * x + b * x + c; }"
+  },
+  {
+    "id": "exponential_decay",
+    "label": "Décroissance exponentielle : y = A · e^(-λt)",
+    "category": "physics",
+    "code": "function exponentialDecay(A, lambda, t) { return A * Math.exp(-lambda * t); }"
+  },
+  {
+    "id": "exponential_growth",
+    "label": "Croissance exponentielle : y = A · e^(kt)",
+    "category": "physics",
+    "code": "function exponentialGrowth(A, k, t) { return A * Math.exp(k * t); }"
+  },
+  {
+    "id": "fibonacci",
+    "label": "Suite de Fibonacci : F(n) = F(n-1) + F(n-2)",
+    "category": "sequence",
+    "code": "function fibonacci(n) { if (n <= 1) return n; let a = 0, b = 1; for (let i = 2; i <= n; i++) { let c = a + b; a = b; b = c; } return b; }"
+  },
+  {
+    "id": "factorial",
+    "label": "Factorielle : n! = n · (n-1) · ... · 1",
+    "category": "combinatorics",
+    "code": "function factorial(n) { let result = 1; for (let i = 2; i <= n; i++) { result *= i; } return result; }"
+  },
+  {
+    "id": "euclidean_distance",
+    "label": "Distance euclidienne : d = √((x2-x1)² + (y2-y1)²)",
+    "category": "geometry",
+    "code": "function distance(x1, y1, x2, y2) { const dx = x2 - x1; const dy = y2 - y1; return Math.sqrt(dx * dx + dy * dy); }"
+  },
+  {
+    "id": "dot_product",
+    "label": "Produit scalaire : a · b = Σ(aᵢ · bᵢ)",
+    "category": "linear_algebra",
+    "code": "function dotProduct(a, b) { let sum = 0; for (let i = 0; i < a.length; i++) { sum += a[i] * b[i]; } return sum; }"
+  },
+  {
+    "id": "mean",
+    "label": "Moyenne arithmétique : μ = (Σxᵢ) / n",
+    "category": "statistics",
+    "code": "function mean(arr) { let sum = 0; for (let i = 0; i < arr.length; i++) { sum += arr[i]; } return sum / arr.length; }"
+  },
+  {
+    "id": "variance",
+    "label": "Variance : σ² = Σ(xᵢ - μ)² / n",
+    "category": "statistics",
+    "code": "function variance(arr) { let sum = 0; for (let i = 0; i < arr.length; i++) { sum += arr[i]; } const mu = sum / arr.length; let v = 0; for (let i = 0; i < arr.length; i++) { v += (arr[i] - mu) * (arr[i] - mu); } return v / arr.length; }"
+  },
+  {
+    "id": "compound_interest",
+    "label": "Intérêt composé : A = P(1 + r/n)^(nt)",
+    "category": "finance",
+    "code": "function compoundInterest(P, r, n, t) { return P * Math.pow(1 + r / n, n * t); }"
+  },
+  {
+    "id": "simple_interest",
+    "label": "Intérêt simple : I = P · r · t",
+    "category": "finance",
+    "code": "function simpleInterest(P, r, t) { return P * r * t; }"
+  },
+  {
+    "id": "clamp",
+    "label": "Borne (clamp) : clamp(x, min, max) = min(max(x, min), max)",
+    "category": "utility",
+    "code": "function clamp(x, min, max) { if (x < min) return min; if (x > max) return max; return x; }"
+  },
+  {
+    "id": "lerp",
+    "label": "Interpolation linéaire : lerp(a, b, t) = a + t(b - a)",
+    "category": "graphics",
+    "code": "function lerp(a, b, t) { return a + t * (b - a); }"
+  },
+  {
+    "id": "sigmoid",
+    "label": "Fonction sigmoïde : σ(x) = 1 / (1 + e^(-x))",
+    "category": "neural_networks",
+    "code": "function sigmoid(x) { return 1 / (1 + Math.exp(-x)); }"
+  },
+  {
+    "id": "relu",
+    "label": "Activation ReLU : f(x) = max(0, x)",
+    "category": "neural_networks",
+    "code": "function relu(x) { return x > 0 ? x : 0; }"
+  },
+  {
+    "id": "gcd",
+    "label": "PGCD : algorithme d'Euclide — GCD(a, b)",
+    "category": "number_theory",
+    "code": "function gcd(a, b) { while (b !== 0) { let t = b; b = a % b; a = t; } return a; }"
+  },
+  {
+    "id": "is_prime",
+    "label": "Test de primalité : n est-il premier ?",
+    "category": "number_theory",
+    "code": "function isPrime(n) { if (n < 2) return false; for (let i = 2; i * i <= n; i++) { if (n % i === 0) return false; } return true; }"
+  },
+  {
+    "id": "binary_search",
+    "label": "Recherche binaire : O(log n) dans un tableau trié",
+    "category": "algorithm",
+    "code": "function binarySearch(arr, target) { let lo = 0, hi = arr.length - 1; while (lo <= hi) { const mid = Math.floor((lo + hi) / 2); if (arr[mid] === target) return mid; if (arr[mid] < target) lo = mid + 1; else hi = mid - 1; } return -1; }"
+  },
+  {
+    "id": "normalize",
+    "label": "Normalisation min-max : x' = (x - min) / (max - min)",
+    "category": "statistics",
+    "code": "function normalize(x, min, max) { return (x - min) / (max - min); }"
+  },
+  {
+    "id": "celsius_to_fahrenheit",
+    "label": "Conversion température : °F = °C × 9/5 + 32",
+    "category": "physics",
+    "code": "function celsiusToFahrenheit(c) { return c * 9 / 5 + 32; }"
+  },
+  {
+    "id": "circle_area",
+    "label": "Aire du cercle : A = π · r²",
+    "category": "geometry",
+    "code": "function circleArea(r) { return Math.PI * r * r; }"
+  },
+  {
+    "id": "log_base",
+    "label": "Changement de base logarithmique : log_b(x) = ln(x) / ln(b)",
+    "category": "algebra",
+    "code": "function logBase(x, b) { return Math.log(x) / Math.log(b); }"
+  },
+  {
+    "id": "moving_average",
+    "label": "Moyenne mobile simple sur les k derniers éléments",
+    "category": "signal_processing",
+    "code": "function movingAverage(arr, k) { const result = []; for (let i = k - 1; i < arr.length; i++) { let sum = 0; for (let j = i - k + 1; j <= i; j++) { sum += arr[j]; } result.push(sum / k); } return result; }"
+  },
+  {
+    "id": "fast_power",
+    "label": "Exponentiation rapide : x^n par carré répété",
+    "category": "algebra",
+    "code": "function power(x, n) { let result = 1; while (n > 0) { if (n % 2 === 1) result *= x; x *= x; n = Math.floor(n / 2); } return result; }"
+  }
+]
