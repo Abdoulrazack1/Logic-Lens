@@ -8,10 +8,11 @@
 [![Acorn](https://img.shields.io/badge/AST-Acorn-7c5cff)](https://github.com/acornjs/acorn)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-<!-- 📽️ GIF/Démo à ajouter ici : utilisateur colle `function fact(n) { return n <= 1 ? 1 : n * fact(n-1); }`, Logic-Lens répond `n! (factorielle, récursive)`. -->
+## 📸 Interface web (`npm run serve` → `:3000`)
 
-<!-- 🌐 Démo en direct (à déployer sur Vercel/Netlify/GH Pages depuis `npm run serve`) :
-     ✨ Essayer Logic-Lens en direct → [DÉPLOIEMENT REQUIS] -->
+[![Logic-Lens interface — code editor + analysis tabs](screenshots/home.png)](screenshots/home.png)
+
+> Interface 2 panneaux : à gauche tu colles ton JS, à droite cinq onglets (**Synthèse / Structure / Sémantique / Intentions / Qualité**) populent au clic sur **Analyser**. Examples pré-chargés : simple, pipeline, middleware, classe.
 
 ---
 
