@@ -3,6 +3,8 @@
 > **L'IA qui déchiffre le « pourquoi » du code JavaScript.**
 > Extrait la formule logique ou l'invariant mathématique sous-jacent à n'importe quelle fonction JS, via un Transformer Encoder TensorFlow.js entraîné sur ~3000 paires AST muté → formule.
 
+[![Featured by Awesome REA](https://raw.githubusercontent.com/reacher-z/Awesome-REA/477658fa73f6860e86cd1fc526657c2efdc25194/assets/featured-by-awesome-rea-inline.svg)](https://awesomerea.org/resources/logic-lens/)
+
 [![Node](https://img.shields.io/badge/node-%E2%89%A518-339933?logo=node.js&logoColor=white)](https://nodejs.org/)
 [![TensorFlow.js](https://img.shields.io/badge/TensorFlow.js-FF6F00?logo=tensorflow&logoColor=white)](https://www.tensorflow.org/js)
 [![Acorn](https://img.shields.io/badge/AST-Acorn-7c5cff)](https://github.com/acornjs/acorn)
